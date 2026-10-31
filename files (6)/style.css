@@ -1,0 +1,100 @@
+:root{
+  --white:#FAF8F4;
+  --ivory:#F3EEE4;
+  --stone:#8A8578;
+  --charcoal:#2A2822;
+  --accent:#6B7A6E;
+  --line: rgba(42,40,34,0.15);
+  --serif:'Lora', serif;
+  --sans:'Inter', sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html,body{height:100%;overflow:hidden;}
+body{
+  font-family:var(--sans);
+  font-weight:300;
+  color:var(--charcoal);
+  background:var(--white);
+}
+
+.page{
+  height:100vh;
+  height:100dvh;
+  max-width:600px;
+  margin:0 auto;
+  padding:5vh 28px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:space-between;
+  text-align:center;
+}
+
+.fade-up{opacity:0;transform:translateY(10px);transition:opacity .6s ease, transform .6s ease;}
+.fade-up.in-view{opacity:1;transform:translateY(0);}
+
+/* Intro */
+.intro{display:flex;flex-direction:column;align-items:center;gap:6px;}
+.name{font-family:var(--serif);font-size:clamp(1.3rem,3vh,1.6rem);}
+.role{font-size:clamp(1rem,2.3vh,1.15rem);color:var(--accent);}
+
+/* Demos */
+.demo-list{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+.demo-btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  width:100%;
+  padding:16px;
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:4px;
+  font-family:var(--serif);
+  font-size:clamp(0.95rem,2vh,1.1rem);
+  color:var(--charcoal);
+  cursor:pointer;
+  transition:border-color .3s ease, background .3s ease, transform .3s ease;
+}
+.demo-btn:hover{
+  border-color:var(--accent);
+  background:var(--ivory);
+  transform:translateY(-2px);
+}
+.demo-btn .arrow{color:var(--accent);transition:transform .3s ease;}
+.demo-btn:hover .arrow{transform:translateX(4px);}
+
+/* Contact */
+.contact{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;
+}
+.contact-row{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px 26px;
+}
+.contact-link{
+  font-size:clamp(0.95rem,2.1vh,1.1rem);
+  color:var(--charcoal);
+  border-bottom:1px solid var(--line);
+  padding-bottom:2px;
+  transition:color .3s ease, border-color .3s ease;
+}
+.contact-link:hover{color:var(--accent);border-color:var(--accent);}
+
+.footer-note{font-size:0.8rem;color:var(--stone);}
+
+@media(max-width:520px){
+  .page{padding:4vh 20px;}
+  .demo-btn{padding:14px;}
+  .contact-row{gap:14px 18px;}
+}

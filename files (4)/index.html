@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boland's Multicuisine — Fine Dining &amp; Contemporary Cuisine</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="loader" id="loader"><span>Boland's Multicuisine</span></div>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">Boland's Multicuisine</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#story">Our Story</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#reserve" class="nav-cta">Reserve</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span></button>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <img class="hero-img" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2000" alt="Elegant candlelit dining room">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-logo reveal-fade">Boland's Multicuisine</p>
+    <h1 class="hero-title reveal-up">An Evening Worth<br>Remembering.</h1>
+    <p class="hero-sub reveal-up">Contemporary cuisine, timeless atmosphere, and an experience crafted around every detail.</p>
+    <div class="hero-actions reveal-up">
+      <a href="#reserve" class="btn btn-light">Reserve a Table</a>
+      <a href="#menu" class="btn btn-outline">Explore the Menu</a>
+    </div>
+  </div>
+  <div class="scroll-indicator"><span></span></div>
+</header>
+
+<section class="intro" id="story">
+  <div class="intro-grid">
+    <div class="intro-image">
+      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1400" alt="Chef plating a dish" loading="lazy">
+    </div>
+    <div class="intro-copy">
+      <p class="eyebrow">Our Story</p>
+      <h2>Where Cuisine Becomes<br>an Experience.</h2>
+      <p class="body-lg">Boland's Multicuisine is built on the belief that a meal is more than what arrives on the plate. Each dish begins with ingredients sourced at their seasonal peak, shaped by modern technique, and finished with a presentation that rewards attention.</p>
+      <p>Our dining room is designed with the same care as our menu — warm materials, considered lighting, and service that anticipates rather than interrupts. Every visit is composed, not repeated.</p>
+      <p class="signature">— The Boland's Multicuisine Culinary Team</p>
+    </div>
+  </div>
+</section>
+
+<section class="experience" id="experience">
+  <p class="eyebrow center">The Experience</p>
+  <h2 class="section-title center">Four Ways to Dine</h2>
+  <div class="experience-grid" id="experienceGrid"></div>
+</section>
+
+<section class="signature-dishes">
+  <p class="eyebrow center">Signature Dishes</p>
+  <h2 class="section-title center">A Taste of Boland's Multicuisine.</h2>
+  <div class="dish-grid" id="dishGrid"></div>
+</section>
+
+<section class="menu" id="menu">
+  <p class="eyebrow center">The Menu</p>
+  <h2 class="section-title center">Tonight's Offering</h2>
+  <div class="menu-tabs" id="menuTabs"></div>
+  <div class="menu-items" id="menuItems"></div>
+</section>
+
+<section class="chef">
+  <div class="chef-grid">
+    <img class="chef-portrait" src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?q=80&w=1200" alt="Chef Adrian Laurent" loading="lazy">
+    <div class="chef-copy">
+      <p class="eyebrow">Crafted With Intention.</p>
+      <h2>Chef Adrian Laurent</h2>
+      <p class="chef-title">Executive Chef</p>
+      <p class="body-lg">Adrian's cuisine is rooted in restraint — letting a single seasonal ingredient lead, and using technique only to reveal it more clearly. His menus change with the market, not the calendar.</p>
+      <p>Trained across kitchens in Lyon and Tokyo before returning home to open Boland's Multicuisine, he brings a contemporary, precise sensibility to dishes that still feel personal.</p>
+      <p class="signature">Adrian Laurent</p>
+    </div>
+  </div>
+</section>
+
+<section class="philosophy">
+  <img class="philosophy-img" src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?q=80&w=1800" alt="Close-up of plated dish" loading="lazy">
+  <div class="philosophy-content">
+    <h2>Respect the Ingredient.<br>Elevate the Moment.</h2>
+    <div class="philosophy-grid">
+      <div><h3>Seasonal</h3><p>Ingredients selected at their peak.</p></div>
+      <div><h3>Artisanal</h3><p>Crafted with patience and precision.</p></div>
+      <div><h3>Contemporary</h3><p>Classic ideas reimagined for today.</p></div>
+      <div><h3>Personal</h3><p>Every plate carries the chef's perspective.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <p class="eyebrow center">Gallery</p>
+  <h2 class="section-title center">Inside Boland's Multicuisine</h2>
+  <div class="gallery-grid" id="galleryGrid"></div>
+</section>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+  <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous">&#8592;</button>
+  <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next">&#8594;</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<section class="private-dining">
+  <img class="private-img" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1800" alt="Private dining table set for an event" loading="lazy">
+  <div class="private-content">
+    <h2>For Moments Worth<br>Gathering For.</h2>
+    <p>From intimate celebrations to corporate dinners, weddings, and chef's table experiences — our private spaces are shaped around your occasion.</p>
+    <a href="#contact" class="btn btn-light">Explore Private Dining</a>
+  </div>
+</section>
+
+<section class="reserve" id="reserve">
+  <p class="eyebrow center">Reservations</p>
+  <h2 class="section-title center">Your Table Awaits.</h2>
+  <form class="reserve-form" id="reserveForm" novalidate>
+    <div class="form-row">
+      <div class="field"><input type="text" id="rname" required><label for="rname">Name</label><span class="err"></span></div>
+      <div class="field"><input type="email" id="remail" required><label for="remail">Email</label><span class="err"></span></div>
+    </div>
+    <div class="form-row">
+      <div class="field"><input type="tel" id="rphone" required><label for="rphone">Phone</label><span class="err"></span></div>
+      <div class="field"><input type="date" id="rdate" required><label for="rdate">Date</label><span class="err"></span></div>
+    </div>
+    <div class="form-row three">
+      <div class="field"><input type="time" id="rtime" required><label for="rtime">Time</label><span class="err"></span></div>
+      <div class="field">
+        <select id="rguests" required>
+          <option value="">Guests</option>
+          <option>1 Guest</option><option>2 Guests</option><option>3 Guests</option><option>4 Guests</option><option>5 Guests</option><option>6+ Guests</option>
+        </select>
+        <span class="err"></span>
+      </div>
+      <div class="field"><input type="text" id="roccasion"><label for="roccasion">Occasion (optional)</label></div>
+    </div>
+    <button type="submit" class="btn btn-dark">Request a Reservation</button>
+    <div class="form-success" id="reserveSuccess">Thank you. Your reservation request has been received.</div>
+  </form>
+</section>
+
+<section class="testimonials">
+  <p class="eyebrow center">Guest Words</p>
+  <div class="testimonial-wrap">
+    <button class="t-nav t-prev" id="tPrev" aria-label="Previous">&#8592;</button>
+    <div class="testimonial-slider" id="testimonialSlider">
+      <div class="testimonial-track" id="testimonialTrack"></div>
+    </div>
+    <button class="t-nav t-next" id="tNext" aria-label="Next">&#8594;</button>
+  </div>
+</section>
+
+<section class="location" id="contact">
+  <div class="location-grid">
+    <div>
+      <p class="eyebrow">Visit Us</p>
+      <h2>Boland's Multicuisine</h2>
+      <p class="body-lg">21 Heritage Avenue<br>Ahmedabad, India</p>
+    </div>
+    <div>
+      <span class="loc-label">Opening Hours</span>
+      <p>Tuesday — Sunday<br>6:30 PM — 11:30 PM</p>
+    </div>
+    <div>
+      <span class="loc-label">Contact</span>
+      <p><a href="tel:+919000000000">+91 90000 00000</a><br><a href="mailto:hello@Boland's Multicuisinerestaurant.com">hello@Boland's Multicuisinerestaurant.com</a></p>
+      <a href="#" class="link-underline">Get Directions</a>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <img class="final-cta-img" src="https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?q=80&w=1800" alt="Restaurant terrace at dusk" loading="lazy">
+  <div class="final-cta-content">
+    <h2>Make Tonight<br>Extraordinary.</h2>
+    <p>Join us for an evening of exceptional cuisine, thoughtful design, and unforgettable moments.</p>
+    <a href="#reserve" class="btn btn-light">Reserve Your Table</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div>
+      <p class="footer-logo">Boland's Multicuisine</p>
+      <p>Fine Dining &amp; Contemporary Cuisine</p>
+    </div>
+    <ul class="footer-links">
+      <li><a href="#story">Our Story</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="footer-newsletter">
+      <p>Stay in the Know</p>
+      <form id="newsletterForm">
+        <input type="email" placeholder="Your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <span class="news-success" id="newsSuccess">Subscribed — welcome to Boland's Multicuisine.</span>
+    </div>
+    <ul class="footer-social">
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">Facebook</a></li>
+      <li><a href="#">LinkedIn</a></li>
+    </ul>
+  </div>
+  <p class="footer-copy">&copy; 2026 Boland's Multicuisine. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

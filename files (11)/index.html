@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aurelia Voyages — Discover the World, Beautifully</title>
+<meta name="description" content="Bespoke luxury travel: curated destinations, packages, hotels and experiences.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav" id="nav">
+  <a href="#home" class="logo">AURELIA<span>Voyages</span></a>
+  <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><i></i><i></i></button>
+  <nav id="menu">
+    <a href="#home">Home</a><a href="#destinations">Destinations</a><a href="#packages">Packages</a><a href="#hotels">Hotels</a><a href="#experiences">Experiences</a><a href="#about">About</a><a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <img class="hero-img" src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=2000&q=80" alt="Overwater villas on a turquoise Maldivian lagoon at sunrise">
+  <div class="hero-in">
+    <p class="eyebrow">Bespoke journeys since 2009</p>
+    <h1>Discover the World, <em>Beautifully.</em></h1>
+    <p class="lead">Handcrafted itineraries, extraordinary stays and private experiences, designed around you.</p>
+    <div class="ctas"><a class="btn" href="#destinations">Explore Destinations</a><a class="btn ghost" href="#packages">View Packages</a></div>
+    <form class="search glass" id="search">
+      <label>Destination<select id="s-dest"></select></label>
+      <label>Departure<input type="date" id="s-dep" required></label>
+      <label>Return<input type="date" id="s-ret" required></label>
+      <label>Travelers<input type="number" id="s-trav" min="1" max="20" value="2"></label>
+      <label>Category<select id="s-cat"><option value="">Any</option><option>Luxury Escapes</option><option>Adventure</option><option>Family Holidays</option><option>Honeymoon</option></select></label>
+      <button class="btn" type="submit">Search</button>
+    </form>
+    <p class="msg" id="s-msg" role="status"></p>
+  </div>
+</section>
+
+<section class="sec" id="destinations"><div class="head reveal"><p class="eyebrow">Destinations</p><h2>Places that stay with you</h2></div><div class="grid g-dest" id="dest-grid"></div></section>
+
+<section class="sec alt" id="packages">
+  <div class="head reveal"><p class="eyebrow">Packages</p><h2>Package explorer</h2></div>
+  <div class="filters reveal">
+    <select id="f-dest" aria-label="Destination"></select>
+    <select id="f-type" aria-label="Travel type"><option value="">All travel types</option><option>Luxury Escapes</option><option>Adventure</option><option>Family Holidays</option><option>Honeymoon</option></select>
+    <select id="f-budget" aria-label="Budget"><option value="">Any budget</option><option value="2500">Under $2,500</option><option value="4500">Under $4,500</option><option value="9999">Under $10,000</option></select>
+    <select id="f-dur" aria-label="Duration"><option value="">Any duration</option><option value="6">Up to 6 nights</option><option value="9">Up to 9 nights</option><option value="99">10+ nights</option></select>
+  </div>
+  <p class="count" id="count"></p>
+  <div class="grid g-pack" id="pack-grid"></div>
+</section>
+
+<section class="sec" id="hotels"><div class="head reveal"><p class="eyebrow">Hotels &amp; Resorts</p><h2>Stay somewhere extraordinary</h2></div><div class="grid g-hotel" id="hotel-grid"></div></section>
+
+<section class="sec dark" id="experiences"><div class="head reveal"><p class="eyebrow">Experiences</p><h2>Moments worth the journey</h2></div><div class="exp" id="exp-grid"></div></section>
+
+<section class="story">
+  <img src="https://images.unsplash.com/photo-1507699622108-4be3abd695ad?auto=format&fit=crop&w=2000&q=80" alt="Mountain lake and peaks in New Zealand at dawn" loading="lazy">
+  <div class="story-in glass reveal"><p class="eyebrow">Featured Story</p><h2>A Journey Beyond Ordinary</h2><p>From a private helicopter landing above Milford Sound to a candlelit supper beside a glacial lake, our New Zealand story is told in silence, scale and light. Every day is unhurried; every detail, quietly arranged.</p><a class="btn" href="#packages">Explore the Journey</a></div>
+</section>
+
+<section class="sec" id="about">
+  <div class="head reveal"><p class="eyebrow">Why Aurelia</p><h2>Travel, considered</h2></div>
+  <div class="grid g-why" id="why"></div>
+  <div class="stats reveal"><div><b data-n="15">0</b><span>Years of craft</span></div><div><b data-n="60">0</b><span>Countries</span></div><div><b data-n="12000">0</b><span>Journeys curated</span></div><div><b data-n="98">0</b><span>% return clients</span></div></div>
+</section>
+
+<section class="sec alt"><div class="head reveal"><p class="eyebrow">Testimonials</p><h2>Words from our travelers</h2></div><div class="grid g-test" id="tests"></div></section>
+
+<section class="news"><div class="reveal"><h2>Travel farther. Experience more.</h2><form id="news-form"><input type="email" id="n-mail" placeholder="Your email address" required aria-label="Email"><button class="btn" type="submit">Subscribe</button></form><p class="small" id="n-msg">We respect your privacy. Unsubscribe at any time.</p></div></section>
+
+<footer id="contact">
+  <div class="f-grid">
+    <div><a href="#home" class="logo">AURELIA<span>Voyages</span></a><p>Bespoke luxury travel for those who value time, space and story.</p></div>
+    <div><h4>Destinations</h4><a href="#destinations">Maldives</a><a href="#destinations">Switzerland</a><a href="#destinations">Japan</a><a href="#destinations">Santorini</a></div>
+    <div><h4>Packages</h4><a href="#packages">Luxury Escapes</a><a href="#packages">Adventure</a><a href="#packages">Family</a><a href="#packages">Honeymoon</a></div>
+    <div><h4>Experiences</h4><a href="#experiences">Yacht Cruises</a><a href="#experiences">Safaris</a><a href="#experiences">Fine Dining</a></div>
+    <div><h4>Contact</h4><a href="mailto:hello@aureliavoyages.com">hello@aureliavoyages.com</a><a href="tel:+911234567890">+91 12345 67890</a><span>Ahmedabad · London · Dubai</span><div class="social"><a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="Facebook">FB</a><a href="#" aria-label="X">X</a><a href="#" aria-label="YouTube">YT</a></div></div>
+  </div>
+  <p class="copy">© 2026 Aurelia Voyages. All rights reserved.</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
